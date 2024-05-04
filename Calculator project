@@ -1,0 +1,35 @@
+while True:
+    print("Welcome to the calculator")
+    num1 = int(input("Enter First Number: "))
+    num2 = int(input("Enter Second Number: "))
+      # First I use input() function to get a String. To convert the string input to integer we use the int() function over the received input.
+    
+    print("Enter which operation would you like to perform?")
+    op = input("Enter any of these operators for specific operation      (+,-,*,/):  ")
+      #I use input() function to get a operator
+    
+    result = 0
+    
+    if op == '+':
+        result = num1 + num2
+    elif op == '-':
+        result = num1 - num2
+    elif op == '*':
+        result = num1 * num2
+    elif op == '/':
+        result = num1 / num2
+    else:
+      print("Input operator is not recognized!")
+    
+      #Out of all these elif conditions only one condition gets executed. If the condition is true then the code inside ‘if’ gets executed, if condition is false then the next condition(associated with elif) is evaluated and so on. If none of the conditions is true then the code inside ‘else’ gets executed.
+    
+    print(num1, op , num2, "=", result)
+    
+    
+    again = input("Would you like to calculate again? y/n:")
+        
+    if again == "y" or again == "Y":
+        continue
+    else:
+      print("Thanks!")
+    break
